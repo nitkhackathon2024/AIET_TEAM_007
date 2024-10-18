@@ -2,10 +2,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://EquityAnalysis-3495602137c6.herokuapp.com/">
-    <img src="public/images/logo.png" alt="Logo" width="full" height="full">
-  </a>
+
 
 <h2 align="center">EquityAnalysis: Crafting Alpha through Data and Strategies</h3>
 
