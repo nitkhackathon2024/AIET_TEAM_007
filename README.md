@@ -6,11 +6,7 @@
 
 <h2 align="center">EquityAnalysis: Crafting Alpha through Data and Strategies</h3>
 
-  <p align="center">
-    A stock web application with display metrics for live data, machine-learning       based predictions and options strategy visualizer.
-  </p>
-
-  # <a href="https://EquityAnalysis-3495602137c6.herokuapp.com/">Live Demo</a>
+ 
 
 </div>
 
