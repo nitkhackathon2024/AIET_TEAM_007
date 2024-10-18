@@ -3,17 +3,17 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://stockpeer-3495602137c6.herokuapp.com/">
+  <a href="https://EquityAnalysis-3495602137c6.herokuapp.com/">
     <img src="public/images/logo.png" alt="Logo" width="full" height="full">
   </a>
 
-<h2 align="center">StockPeer: Crafting Alpha through Data and Strategies</h3>
+<h2 align="center">EquityAnalysis: Crafting Alpha through Data and Strategies</h3>
 
   <p align="center">
     A stock web application with display metrics for live data, machine-learning       based predictions and options strategy visualizer.
   </p>
 
-  # <a href="https://stockpeer-3495602137c6.herokuapp.com/">Live Demo</a>
+  # <a href="https://EquityAnalysis-3495602137c6.herokuapp.com/">Live Demo</a>
 
 </div>
 
@@ -92,42 +92,6 @@ The goal of this project was to create a full-stack web application where users 
 
 
 
-## Installation
-
-Please follow instructions below to install and run the project on your local device.
-
-
-1. Clone the repository.
-   ```sh
-   git clone https://github.com/mh2rashi/StockPeer.git
-   ```
-2. Install NPM packages in client and server folders.
-   ```sh
-   cd server && npm install
-   cd client && npm install
-   ```
-
-3. Get a free API Key at [Finnhub Stock API.](https://finnhub.io/)
-
-4. Enter your API in `client/.env.local` file.
-   ```sh
-   API_TOKEN = 'ENTER YOUR API'
-   ```
-
-5. Run the the development server on your local machine.
-    ```sh
-    cd server && npm run dev
-    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## Usage
-
-Please access the [Live Demo](https://stockpeer-3495602137c6.herokuapp.com/) for this project. Enter an appropriate ticker to view real-time stock prices subject to US market hours.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## Next Steps
 
@@ -139,36 +103,4 @@ Please access the [Live Demo](https://stockpeer-3495602137c6.herokuapp.com/) for
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
-## Contact
-
-Hamza Rashid
-
-- Email : hamza022697@gmail.com
-- LinkedIn: https://www.linkedin.com/in/mhamza-rashid/
-
-Bilal Rashid
-
-- Email: bilal0197@gmail.com
-- LinkedIn: https://www.linkedin.com/in/bilal-rashid-a04625198/
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-I would like to thank Ed Roh for inspiring the [project idea](https://www.youtube.com/watch?v=uoJ0Tv-BFcQ&t=52s), and my heartfelt gratitude goes to my brother and partner for this project, Bilal Rashid.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 

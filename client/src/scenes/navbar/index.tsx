@@ -61,7 +61,7 @@ const Navbar = ({ searchQuery, onSearchChange, onSearchTicker, selectedPage }) =
         {/* Icon */}
         <Box gap="0.75rem"  display="flex">
           <QueryStatsIcon sx={{ fontSize: "44px" }} />
-          <Typography variant="h4" fontSize="32px">StockPeer</Typography>
+          <Typography variant="h4" fontSize="32px">EquityAnalysis</Typography>
         </Box>
 
         {/* Search Bar */}

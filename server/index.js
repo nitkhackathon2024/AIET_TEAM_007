@@ -11,6 +11,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
+import axios from "axios"; // New import for making API requests
 
 // Importing individual data fetching functions
 import getStatisticsData from "./data/statisticsData.js";
@@ -35,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 const PORT = process.env.PORT || 9000;
+const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY || "WE387VDIQMYZO5R3"; // Replace with your actual API key
 
 // Start the server
 app.listen(PORT, () => {
@@ -43,6 +45,33 @@ app.listen(PORT, () => {
 
 // API endpoints
 
+// Endpoint to fetch real-time stock price for a given ticker using Alpha Vantage API
+app.get('/api/stock-price/:ticker', async (req, res) => {
+    const ticker = req.params.ticker.toUpperCase();
+    const apiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=${ALPHA_VANTAGE_API_KEY}`;
+
+    try {
+        const response = await axios.get(apiUrl);
+        const stockPriceData = response.data["Global Quote"];
+        
+        if (stockPriceData && stockPriceData["05. price"]) {
+          // Return the price if it exists
+          res.status(200).json({
+              symbol: ticker,
+              price: stockPriceData["05. price"],
+              lastTradeTime: stockPriceData["07. latest trading day"],
+              volume: stockPriceData["06. volume"],
+          });
+      } else {
+          // If no price data is found, send a 404 with a specific message
+          res.status(404).json({ message: `No stock price data found for ticker ${ticker}` });
+      }
+  } catch (error) {
+        res.status(500).json({ message: `Error fetching stock price for ticker ${ticker}: ${error.message}` });
+    }
+});
+
+// (Your existing endpoints continue below...)
 // Endpoint to fetch statistics for a given ticker
 app.get('/api/statistics/:ticker', async (req, res) => {
     const ticker = req.params.ticker.toUpperCase();
@@ -54,6 +83,9 @@ app.get('/api/statistics/:ticker', async (req, res) => {
         res.status(500).json({ message: `Error fetching statistics for ticker ${ticker}: ${error.message}` });
     }
 });
+
+// (Other endpoints continue as normal...)
+
 
 // Endpoint to fetch profile data for a given ticker
 app.get('/api/profile/:ticker', async (req, res) => {
